@@ -30,15 +30,8 @@
         .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
         .nav-logo-img{width:62px;height:62px;border-radius:50%;overflow:hidden;flex-shrink:0;}
         .nav-logo-img img{width:145%;height:145%;margin:-22.5%;object-fit:cover;display:block;}
-        .nav-logo-text{font-family:'Dancing Script',cursive;font-size:1.25rem;color:var(--cream);line-height:1.15;}
+        .nav-logo-text{font-family:'Dancing Script',cursive;font-size:1.25rem;color:var(--cream);line-height:1.2;white-space:nowrap;}
         .nav-logo-text em{color:var(--green-l);font-style:normal;}
-        /* mobile-only centred "Garden Centre" label */
-        .nav-mobile-gc{
-            display:none;
-            position:absolute;left:50%;transform:translateX(-50%);
-            font-family:'Dancing Script',cursive;font-size:1.1rem;
-            color:var(--green-l);font-style:normal;pointer-events:none;white-space:nowrap;
-        }
         .nav-links{display:flex;gap:14px;list-style:none;align-items:center;}
         .nav-links a{
             color:rgba(242,237,228,.85);text-decoration:none;font-size:.72rem;
@@ -432,9 +425,8 @@
         @media(max-width:920px){
             nav{padding:14px 26px;}
             nav.scrolled{padding:8px 26px;}
-            /* On mobile: hide "Garden Centre" from logo, show it centred in nav bar */
-            .nav-logo-text em{display:none;}
-            .nav-mobile-gc{display:block;}
+            /* On mobile: keep single line, shrink font to fit */
+            .nav-logo-text{font-size:.88rem;}
             .nav-links{display:none;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(13,18,10,.98);padding:18px 26px;gap:18px;border-bottom:1px solid rgba(74,140,42,.18);}
             .nav-links.open{display:flex;}
             .hamburger{display:flex;}
@@ -476,9 +468,8 @@
         <div class="nav-logo-img">
             <img src="WhatsApp Image 2026-04-01 at 19.07.15.jpeg" alt="Logo">
         </div>
-        <div class="nav-logo-text">Groblersdal<br><em>Garden Centre</em></div>
+        <div class="nav-logo-text">Groblersdal <em>Garden Centre</em></div>
     </a>
-    <div class="nav-mobile-gc">Garden Centre</div>
     <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#nursery">Nursery</a></li>
