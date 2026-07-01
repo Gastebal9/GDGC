@@ -83,6 +83,10 @@
         .nav-cta{background:var(--green)!important;color:#fff!important;padding:7px 20px!important;border-radius:25px;font-weight:700!important;}
         .nav-cta::after{display:none!important;}
         .nav-cta:hover{background:var(--green-l)!important;color:var(--dark)!important;}
+        .nav-shop{background:linear-gradient(135deg,var(--gold),var(--gold-l))!important;color:var(--dark)!important;padding:7px 22px!important;border-radius:25px;font-weight:700!important;box-shadow:0 3px 14px rgba(201,168,76,.45);animation:shopPulse 2.2s ease-in-out infinite;}
+        .nav-shop::after{display:none!important;}
+        .nav-shop:hover{background:linear-gradient(135deg,var(--gold-l),var(--gold))!important;color:var(--dark)!important;transform:translateY(-1px);}
+        @keyframes shopPulse{0%,100%{box-shadow:0 3px 14px rgba(201,168,76,.4);}50%{box-shadow:0 3px 22px rgba(232,200,108,.75);}}
         .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:5px;}
         .hamburger span{display:block;width:24px;height:2px;background:var(--cream);transition:.3s;}
 
@@ -509,6 +513,7 @@
         <div class="nav-logo-text">Groblersdal<br><em>Garden Centre</em></div>
     </a>
     <ul class="nav-links" id="navLinks">
+        <li><a href="https://groblersdalgardencentre.bushnetsolutions.com/" class="nav-shop">🛒 Shop</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#nursery">Nursery</a></li>
         <li><a href="#landscaping">Landscaping</a></li>
