@@ -139,7 +139,7 @@
 
         /* ── ABOUT ───────────────────────────────── */
         #about{background:var(--cream);color:var(--dark);padding:100px 60px;}
-        .about-wrap{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:75px;align-items:center;}
+        .about-wrap{max-width:760px;margin:0 auto;}
         .about-text .sec-label{color:var(--green);}
         .about-text .sec-title{color:var(--dark);}
         .about-text p{font-size:1rem;line-height:1.85;color:#3a4030;margin-bottom:18px;}
@@ -487,7 +487,13 @@
             .stats{gap:18px;}
         }
         @media(max-width:560px){
-            .products-grid,.land-services,.features-grid,.menu-grid,.wed-services{grid-template-columns:1fr;}
+            .land-services,.features-grid,.menu-grid{grid-template-columns:1fr;}
+            .products-grid,.wed-services{grid-template-columns:1fr 1fr;gap:10px;}
+            .prod-card,.wed-card{padding:18px 12px;}
+            .prod-icon{font-size:1.9rem;margin-bottom:8px;}
+            .prod-name,.wed-card-title{font-size:.82rem;}
+            .prod-desc,.wed-card-text{font-size:.68rem;line-height:1.45;}
+            .wed-card-icon{font-size:1.7rem;margin-bottom:8px;}
             .hero-logo{width:220px;height:220px;}
             .about-card ul{grid-template-columns:1fr;}
             .nursery-photos{grid-template-columns:1fr;grid-template-rows:220px;}
@@ -520,7 +526,7 @@
         <li><a href="#garden-decor">Garden Decor</a></li>
         <li><a href="#compost">Compost &amp; Fertilizers</a></li>
         <li><a href="#florist">Florist</a></li>
-        <li><a href="#tropical-fish">Tropical Fish</a></li>
+        <li><a href="#tropical-fish">Aquarium &amp; Pond</a></li>
         <li><a href="#coffee">Coffee Pot</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#contact" class="nav-cta">Visit Us</a></li>
@@ -579,20 +585,6 @@
                 <div><div class="stat-n">1</div><div class="stat-l">Cozy Coffee Shop</div></div>
             </div>
         </div>
-        <div class="aos right">
-            <div class="about-card">
-                <div class="about-card-title">What We Offer</div>
-                <ul>
-                    <li>Indoor Plants</li><li>Outdoor Plants</li>
-                    <li>Trees</li><li>Instant Lawn</li>
-                    <li>Compost</li><li>Fertilizer</li>
-                    <li>Garden Decor</li><li>Florist</li>
-                    <li>Herbs</li><li>Seedlings</li>
-                    <li>Tropical Fish</li><li>Landscaping</li>
-                    <li>Coffee Pot ☕</li><li>Garden Design</li>
-                </ul>
-            </div>
-        </div>
     </div>
 </section>
 
@@ -617,14 +609,16 @@
 
         <div class="products-grid">
             <div class="prod-card aos d1"><span class="prod-icon">🪴</span><h3 class="prod-name">Indoor &amp; Outdoor Plants</h3><p class="prod-desc">A wide selection for every corner of your home and garden</p></div>
-            <div class="prod-card aos d2"><span class="prod-icon">🌳</span><h3 class="prod-name">Trees</h3><p class="prod-desc">Shade trees, fruit trees, ornamental trees and more</p></div>
-            <div class="prod-card aos d3"><span class="prod-icon">🌿</span><h3 class="prod-name">Instant Lawn</h3><p class="prod-desc">Transform your yard instantly with quality lawn options</p></div>
-            <div class="prod-card aos d4"><span class="prod-icon">🌱</span><h3 class="prod-name">Compost &amp; Fertilizer</h3><p class="prod-desc">Premium growing mediums and nutrients for healthy plants</p></div>
-            <div class="prod-card aos d5"><span class="prod-icon">🏺</span><h3 class="prod-name">Garden Decor</h3><p class="prod-desc">Beautiful ornaments and accessories to style your outdoor space</p></div>
-            <div class="prod-card aos d6"><span class="prod-icon">💐</span><h3 class="prod-name">Florist</h3><p class="prod-desc">Fresh flowers and custom arrangements for every occasion</p></div>
-            <div class="prod-card aos d7"><span class="prod-icon">🌿</span><h3 class="prod-name">Herbs</h3><p class="prod-desc">Culinary and medicinal herbs for your kitchen garden</p></div>
-            <div class="prod-card aos d8"><span class="prod-icon">🌸</span><h3 class="prod-name">Flower &amp; Vegetable Seedlings</h3><p class="prod-desc">Quality seedlings to start your veggie patch or flower bed</p></div>
-            <div class="prod-card aos d9"><span class="prod-icon">🐠</span><h3 class="prod-name">Tropical Fish</h3><p class="prod-desc">Beautiful tropical fish to bring life and colour to any pond</p></div>
+            <div class="prod-card aos d2"><span class="prod-icon">🌳</span><h3 class="prod-name">Trees</h3><p class="prod-desc">Shade trees, ornamental trees and feature plants</p></div>
+            <div class="prod-card aos d3"><span class="prod-icon">🍎</span><h3 class="prod-name">Fruit Trees</h3><p class="prod-desc">A variety of fruit trees to grow your own fresh harvest</p></div>
+            <div class="prod-card aos d4"><span class="prod-icon">🌿</span><h3 class="prod-name">Lawn</h3><p class="prod-desc">Quality lawn to transform your yard into lush green space</p></div>
+            <div class="prod-card aos d5"><span class="prod-icon">🌱</span><h3 class="prod-name">Compost &amp; Fertilizer</h3><p class="prod-desc">Premium growing mediums and nutrients for healthy plants</p></div>
+            <div class="prod-card aos d6"><span class="prod-icon">🏺</span><h3 class="prod-name">Garden Decor</h3><p class="prod-desc">Beautiful ornaments and accessories to style your outdoor space</p></div>
+            <div class="prod-card aos d7"><span class="prod-icon">💐</span><h3 class="prod-name">Florist</h3><p class="prod-desc">Fresh flowers and custom arrangements for every occasion</p></div>
+            <div class="prod-card aos d8"><span class="prod-icon">🌿</span><h3 class="prod-name">Herbs</h3><p class="prod-desc">Culinary and medicinal herbs for your kitchen garden</p></div>
+            <div class="prod-card aos d9"><span class="prod-icon">🌸</span><h3 class="prod-name">Flower Seedlings</h3><p class="prod-desc">Quality seedlings to fill your beds with colour</p></div>
+            <div class="prod-card aos d1"><span class="prod-icon">🥬</span><h3 class="prod-name">Vegetable Seedlings</h3><p class="prod-desc">Fresh veggie seedlings to start your own kitchen patch</p></div>
+            <div class="prod-card aos d2"><span class="prod-icon">🐠</span><h3 class="prod-name">Aquarium &amp; Pond</h3><p class="prod-desc">Tropical fish, pond life and water features for your garden</p></div>
         </div>
     </div>
 </section>
@@ -655,39 +649,6 @@
                 <div class="land-img-item"><img src="WhatsApp Image 2026-04-01 at 20.38.26 (1).jpeg" alt="Rock garden path with agapanthus in bloom"></div>
                 <div class="land-img-item"><img src="WhatsApp Image 2026-04-01 at 20.38.25.jpeg" alt="Commercial landscaping project Amper Alles"></div>
                 <div class="land-img-item"><img src="WhatsApp Image 2026-04-01 at 20.38.26.jpeg" alt="Rock-edged garden path with aloes"></div>
-            </div>
-        </div>
-
-        <div class="land-services">
-            <div class="land-card aos d1">
-                <span class="land-card-icon">📐</span>
-                <h3 class="land-card-title">Garden Design &amp; Planning</h3>
-                <p class="land-card-text">Custom garden layouts tailored to your space, style, and budget</p>
-            </div>
-            <div class="land-card aos d2">
-                <span class="land-card-icon">🌳</span>
-                <h3 class="land-card-title">Tree &amp; Plant Installation</h3>
-                <p class="land-card-text">Professional planting of trees, shrubs, and feature plants from our nursery</p>
-            </div>
-            <div class="land-card aos d3">
-                <span class="land-card-icon">🟩</span>
-                <h3 class="land-card-title">Instant Lawn Installation</h3>
-                <p class="land-card-text">Supply and laying of instant lawn for a lush, green result immediately</p>
-            </div>
-            <div class="land-card aos d4">
-                <span class="land-card-icon">🏺</span>
-                <h3 class="land-card-title">Décor &amp; Feature Placement</h3>
-                <p class="land-card-text">Placement of pots, urns, ornaments and garden features for character</p>
-            </div>
-            <div class="land-card aos d5">
-                <span class="land-card-icon">🌱</span>
-                <h3 class="land-card-title">Soil Preparation &amp; Composting</h3>
-                <p class="land-card-text">Quality compost and soil preparation for the best growing conditions</p>
-            </div>
-            <div class="land-card aos d6">
-                <span class="land-card-icon">🔧</span>
-                <h3 class="land-card-title">Garden Maintenance</h3>
-                <p class="land-card-text">Ongoing care plans to keep your garden looking its very best year-round</p>
             </div>
         </div>
 
@@ -886,7 +847,7 @@
         </div>
         <div class="fish-content aos right">
             <span class="sec-label">Aquatic Life</span>
-            <h2 class="sec-title">Tropical Fish</h2>
+            <h2 class="sec-title">Aquarium &amp; Pond</h2>
             <div class="divider" style="justify-content:flex-start;color:var(--green-l)"><span>🐠</span><span style="height:1px;width:55px;background:var(--green-l);opacity:.4;display:block;"></span></div>
             <p>A beautiful selection of tropical fish available in store — perfect for garden ponds, water features, and ornamental tanks. We stock a variety of species to suit every water environment.</p>
             <div class="fish-list">
@@ -963,7 +924,6 @@
             <button class="gf-btn" data-filter="nursery">Nursery</button>
             <button class="gf-btn" data-filter="landscaping">Landscaping</button>
             <button class="gf-btn" data-filter="florist">Florist</button>
-            <button class="gf-btn" data-filter="wedding">Weddings</button>
         </div>
 
         <div class="gallery-grid">
@@ -1061,59 +1021,59 @@
                 <div class="g-zoom">🔍</div>
             </div>
             <!-- Wedding images -->
-            <div class="g-item tall" data-cat="wedding">
+            <div class="g-item tall" data-cat="florist">
                 <img src="WhatsApp Image 2026-04-01 at 20.30.36 (3).jpeg" alt="Outdoor ceremony aisle">
-                <div class="g-overlay"><span class="g-tag">Weddings</span><span class="g-label">Ceremony Aisle</span></div>
+                <div class="g-overlay"><span class="g-tag">Florist</span><span class="g-label">Ceremony Aisle</span></div>
                 <div class="g-zoom">🔍</div>
             </div>
-            <div class="g-item wide" data-cat="wedding">
+            <div class="g-item wide" data-cat="florist">
                 <img src="WhatsApp Image 2026-04-01 at 20.30.35.jpeg" alt="Wedding reception table">
-                <div class="g-overlay"><span class="g-tag">Weddings</span><span class="g-label">Reception Table Setup</span></div>
+                <div class="g-overlay"><span class="g-tag">Florist</span><span class="g-label">Reception Table Setup</span></div>
                 <div class="g-zoom">🔍</div>
             </div>
-            <div class="g-item" data-cat="wedding">
+            <div class="g-item" data-cat="florist">
                 <img src="WhatsApp Image 2026-04-01 at 20.30.36 (6).jpeg" alt="Bride's bouquet">
-                <div class="g-overlay"><span class="g-tag">Weddings</span><span class="g-label">Bridal Bouquet</span></div>
+                <div class="g-overlay"><span class="g-tag">Florist</span><span class="g-label">Bridal Bouquet</span></div>
                 <div class="g-zoom">🔍</div>
             </div>
-            <div class="g-item" data-cat="wedding">
+            <div class="g-item" data-cat="florist">
                 <img src="WhatsApp Image 2026-04-01 at 20.30.35 (1).jpeg" alt="Floral installation">
-                <div class="g-overlay"><span class="g-tag">Weddings</span><span class="g-label">Floral Installation</span></div>
+                <div class="g-overlay"><span class="g-tag">Florist</span><span class="g-label">Floral Installation</span></div>
                 <div class="g-zoom">🔍</div>
             </div>
-            <div class="g-item wide" data-cat="wedding">
+            <div class="g-item wide" data-cat="florist">
                 <img src="WhatsApp Image 2026-04-01 at 20.30.36 (8).jpeg" alt="Bride and bridesmaids">
-                <div class="g-overlay"><span class="g-tag">Weddings</span><span class="g-label">Bridal Party</span></div>
+                <div class="g-overlay"><span class="g-tag">Florist</span><span class="g-label">Bridal Party</span></div>
                 <div class="g-zoom">🔍</div>
             </div>
-            <div class="g-item" data-cat="wedding">
+            <div class="g-item" data-cat="florist">
                 <img src="WhatsApp Image 2026-04-01 at 20.30.36 (1).jpeg" alt="Wedding backdrop">
-                <div class="g-overlay"><span class="g-tag">Weddings</span><span class="g-label">Ceremony Backdrop</span></div>
+                <div class="g-overlay"><span class="g-tag">Florist</span><span class="g-label">Ceremony Backdrop</span></div>
                 <div class="g-zoom">🔍</div>
             </div>
-            <div class="g-item" data-cat="wedding">
+            <div class="g-item" data-cat="florist">
                 <img src="WhatsApp Image 2026-04-01 at 20.30.36 (5).jpeg" alt="Groom boutonniere">
-                <div class="g-overlay"><span class="g-tag">Weddings</span><span class="g-label">Groom's Boutonniere</span></div>
+                <div class="g-overlay"><span class="g-tag">Florist</span><span class="g-label">Groom's Boutonniere</span></div>
                 <div class="g-zoom">🔍</div>
             </div>
-            <div class="g-item" data-cat="wedding">
+            <div class="g-item" data-cat="florist">
                 <img src="WhatsApp Image 2026-04-01 at 20.30.36 (2).jpeg" alt="Ceremony florals">
-                <div class="g-overlay"><span class="g-tag">Weddings</span><span class="g-label">Ceremony Florals</span></div>
+                <div class="g-overlay"><span class="g-tag">Florist</span><span class="g-label">Ceremony Florals</span></div>
                 <div class="g-zoom">🔍</div>
             </div>
-            <div class="g-item" data-cat="wedding">
+            <div class="g-item" data-cat="florist">
                 <img src="WhatsApp Image 2026-04-01 at 20.30.36 (4).jpeg" alt="Close-up blooms">
-                <div class="g-overlay"><span class="g-tag">Weddings</span><span class="g-label">Seasonal Blooms</span></div>
+                <div class="g-overlay"><span class="g-tag">Florist</span><span class="g-label">Seasonal Blooms</span></div>
                 <div class="g-zoom">🔍</div>
             </div>
-            <div class="g-item" data-cat="wedding">
+            <div class="g-item" data-cat="florist">
                 <img src="WhatsApp Image 2026-04-01 at 20.30.36.jpeg" alt="Wedding favours">
-                <div class="g-overlay"><span class="g-tag">Weddings</span><span class="g-label">Botanical Favours</span></div>
+                <div class="g-overlay"><span class="g-tag">Florist</span><span class="g-label">Botanical Favours</span></div>
                 <div class="g-zoom">🔍</div>
             </div>
-            <div class="g-item" data-cat="wedding">
+            <div class="g-item" data-cat="florist">
                 <img src="WhatsApp Image 2026-04-01 at 20.30.36 (7).jpeg" alt="Bridesmaid florals">
-                <div class="g-overlay"><span class="g-tag">Weddings</span><span class="g-label">Bridesmaid Florals</span></div>
+                <div class="g-overlay"><span class="g-tag">Florist</span><span class="g-label">Bridesmaid Florals</span></div>
                 <div class="g-zoom">🔍</div>
             </div>
         </div>
@@ -1192,10 +1152,10 @@
                 <h4>Products</h4>
                 <ul>
                     <li><a href="#nursery">Plants &amp; Trees</a></li>
-                    <li><a href="#nursery">Instant Lawn</a></li>
+                    <li><a href="#nursery">Lawn</a></li>
                     <li><a href="#garden-decor">Garden Decor</a></li>
                     <li><a href="#florist">Florist</a></li>
-                    <li><a href="#tropical-fish">Tropical Fish</a></li>
+                    <li><a href="#tropical-fish">Aquarium &amp; Pond</a></li>
                     <li><a href="#nursery">Herbs &amp; Seedlings</a></li>
                 </ul>
             </div>
